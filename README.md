@@ -51,6 +51,19 @@ npm run start
 pnpm start
 ```
 
+## 🔄 GitHub Pages 자동 배포
+
+이 프로젝트는 GitHub Actions를 통해 자동으로 GitHub Pages에 배포되도록 설정되어 있습니다. `main` 브랜치에 변경사항을 푸시하면 자동으로 빌드 및 배포가 실행됩니다.
+
+### 배포 과정
+1. `main` 브랜치에 코드를 푸시합니다.
+2. GitHub Actions 워크플로우가 자동으로 실행됩니다.
+3. 프로젝트가 빌드되고 정적 파일이 생성됩니다.
+4. 생성된 정적 파일이 GitHub Pages에 배포됩니다.
+
+### 배포된 사이트 접속
+- URL: [https://kanghyunwoo920106.github.io/port_hyunwoo](https://kanghyunwoo920106.github.io/port_hyunwoo)
+
 ## 🔧 기술 스택
 
 - **프론트엔드**: React 19, Next.js 15
@@ -73,6 +86,9 @@ port_hyunwoo/
 │       ├── markdown-note/      # 마크다운 노트 프로젝트
 │       └── music-visualization/ # 음악 시각화 프로젝트
 ├── public/                     # 정적 파일
+├── .github/                    # GitHub 설정
+│   └── workflows/              # GitHub Actions 워크플로우
+│       └── deploy.yml          # 자동 배포 워크플로우
 └── ...
 ```
 
@@ -80,3 +96,7 @@ port_hyunwoo/
 
 - **이름**: 강현우
 - **GitHub**: [github.com/kanghyunwoo920106](https://github.com/kanghyunwoo920106)
+
+## 📄 라이선스
+
+MIT 라이선스에 따라 배포됩니다.

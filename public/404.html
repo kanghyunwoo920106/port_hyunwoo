@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>강현우 포트폴리오</title>
+  <script>
+    // GitHub Pages에서 SPA 라우팅을 처리하기 위한 스크립트
+    // 현재 URL 경로 가져오기
+    var pathSegmentsToKeep = 1;
+    var l = window.location;
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+      l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+      (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+      l.hash
+    );
+  </script>
+</head>
+<body>
+  <h1>페이지를 찾을 수 없습니다.</h1>
+  <p>메인 페이지로 리디렉션 중입니다...</p>
+</body>
+</html> 
