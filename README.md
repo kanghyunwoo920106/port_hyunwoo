@@ -53,10 +53,10 @@ pnpm start
 
 ## 🔄 GitHub Pages 자동 배포
 
-이 프로젝트는 GitHub Actions를 통해 자동으로 GitHub Pages에 배포되도록 설정되어 있습니다. `main` 브랜치에 변경사항을 푸시하면 자동으로 빌드 및 배포가 실행됩니다.
+이 프로젝트는 GitHub Actions를 통해 자동으로 GitHub Pages에 배포되도록 설정되어 있습니다. `master` 브랜치에 변경사항을 푸시하면 자동으로 빌드 및 배포가 실행됩니다.
 
 ### 배포 과정
-1. `main` 브랜치에 코드를 푸시합니다.
+1. `master` 브랜치에 코드를 푸시합니다.
 2. GitHub Actions 워크플로우가 자동으로 실행됩니다.
 3. 프로젝트가 빌드되고 정적 파일이 생성됩니다.
 4. 생성된 정적 파일이 GitHub Pages에 배포됩니다.
