@@ -1,0 +1,203 @@
+@import "tailwindcss";
+
+:root {
+  /* 다크 모드 기본 변수 */
+  --background: #111827;
+  --foreground: #f3f4f6;
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --secondary: #1f2937;
+  --secondary-foreground: #f3f4f6;
+  --accent: #6366f1;
+  --accent-foreground: #ffffff;
+  --border: #374151;
+  --input: #374151;
+  --ring: #3b82f6;
+  --radius: 0.5rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans, Arial, sans-serif);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 사용자 정의 스크롤바 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* 마크다운 프리뷰 스타일 */
+.prose {
+  color: #ffffff !important;
+}
+
+.prose p, 
+.prose li, 
+.prose h1, 
+.prose h2, 
+.prose h3, 
+.prose h4, 
+.prose h5, 
+.prose h6,
+.prose strong,
+.prose em,
+.prose blockquote,
+.prose ol,
+.prose ul,
+.prose table,
+.prose thead,
+.prose tbody,
+.prose tr,
+.prose th,
+.prose td {
+  color: #ffffff !important;
+}
+
+.prose a {
+  color: #3b82f6 !important;
+  text-decoration: underline;
+}
+
+.prose blockquote {
+  border-left-color: #4b5563;
+  background-color: rgba(75, 85, 99, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+/* 코드 블록 하이라이팅 */
+.prose pre {
+  background-color: #0f172a !important;
+  border-radius: var(--radius);
+}
+
+.prose code {
+  color: #60a5fa !important;
+}
+
+/* React Modal 스타일링 */
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.ReactModal__Content {
+  transform: scale(0.8);
+  transition: transform 200ms ease-in-out;
+  border: none !important;
+  background-color: #ffffff !important;
+  color: #333333 !important;
+}
+
+.ReactModal__Content--after-open {
+  transform: scale(1);
+}
+
+.ReactModal__Content--before-close {
+  transform: scale(0.8);
+}
+
+/* ReactModal 내 모든 텍스트 요소가 잘 보이도록 */
+.ReactModal__Content p,
+.ReactModal__Content h2,
+.ReactModal__Content h3,
+.ReactModal__Content div,
+.ReactModal__Content span,
+.ReactModal__Content button,
+.ReactModal__Content label {
+  color: #333333 !important;
+}
+
+.ReactModal__Content .text-xs {
+  color: #6b7280 !important;
+}
+
+/* 모달 내부 요소 스타일링 */
+.ReactModal__Content input[type="text"],
+.ReactModal__Content input[type="password"],
+.ReactModal__Content input[type="email"],
+.ReactModal__Content input[type="number"] {
+  background-color: #f9fafb !important;
+  color: #333333 !important;
+  border-color: #d1d5db !important;
+  border-radius: 6px !important;
+}
+
+.ReactModal__Content input[type="text"]:focus,
+.ReactModal__Content input[type="password"]:focus,
+.ReactModal__Content input[type="email"]:focus,
+.ReactModal__Content input[type="number"]:focus {
+  border-color: #3b82f6 !important;
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2) !important;
+}
+
+.ReactModal__Content button {
+  border-radius: 6px !important;
+}
+
+.ReactModal__Content h2 {
+  color: #333333 !important;
+  margin-bottom: 16px !important;
+}
+
+.ReactModal__Content label {
+  color: #4b5563 !important;
+  display: block !important;
+  margin-bottom: 6px !important;
+}
+
+.ReactModal__Content ::placeholder {
+  color: #9ca3af !important;
+}
+
+/* 알림 모달 스타일 개선 */
+.ReactModal__Content .bg-green-100 {
+  background-color: rgba(209, 250, 229, 0.8) !important;
+  border: 1px solid rgba(16, 185, 129, 0.3) !important;
+}
+
+.ReactModal__Content .bg-red-100 {
+  background-color: rgba(254, 226, 226, 0.8) !important;
+  border: 1px solid rgba(239, 68, 68, 0.3) !important;
+}
+
+.ReactModal__Content .text-green-800 {
+  color: #047857 !important;
+}
+
+.ReactModal__Content .text-red-800 {
+  color: #b91c1c !important;
+}

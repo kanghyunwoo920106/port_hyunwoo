@@ -11,7 +11,10 @@
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.3.0"
+    "next": "15.3.0",
+    "react-json-view": "^1.21.3",
+    "marked": "^15.0.7",
+    "react-modal": "^3.16.3"
   },
   "devDependencies": {
     "typescript": "^5",

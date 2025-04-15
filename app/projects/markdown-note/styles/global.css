@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-light: #ffffff;
+  --bg-dark: #1a1a1a;
+  --bg-custom: #f5f0ff;
+  --text-light: #000000;
+  --text-dark: #ffffff;
+  --text-custom: #4b0082;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.custom {
+  background-color: var(--bg-custom);
+  color: var(--text-custom);
+}
+
+textarea {
+  font-family: monospace;
+  resize: none;
+}
