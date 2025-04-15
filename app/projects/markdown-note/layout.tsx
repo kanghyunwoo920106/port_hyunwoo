@@ -1,5 +1,6 @@
+"use client";
+
 import { useEffect } from "react";
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "./reactmodal.css";
@@ -14,12 +15,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// metadata는 클라이언트 컴포넌트에서 직접 사용할 수 없지만, 
-// 레이아웃 정보로 유지합니다
-export const metadata = {
-  title: "마크다운 메모장",
-  description: "다크 테마 마크다운 에디터와 프리뷰어",
-};
+// 클라이언트 컴포넌트에서는 metadata를 export할 수 없음
+// 대신 <title> 태그를 직접 사용하거나 별도의 서버 컴포넌트에서 metadata를 export해야 함
 
 export default function MarkdownNoteLayout({
   children,
@@ -46,6 +43,12 @@ export default function MarkdownNoteLayout({
         localStorage.setItem('theme', prevTheme);
       }
     };
+  }, []);
+
+  // 문서 제목 설정을 위한 useEffect 추가
+  useEffect(() => {
+    // 문서 제목 변경
+    document.title = "마크다운 메모장";
   }, []);
 
   return (
