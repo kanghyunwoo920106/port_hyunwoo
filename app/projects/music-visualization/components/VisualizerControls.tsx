@@ -77,11 +77,11 @@ export default function VisualizerControls({
               id="visualizer-type"
               value={visualizationType}
               onChange={(e) => setVisualizationType(e.target.value as any)}
-              className="block w-full pl-4 pr-10 py-3 text-base bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 appearance-none dark:text-gray-200"
+              className="block w-full pl-4 pr-10 py-3 text-base text-gray-900 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 appearance-none dark:text-gray-200"
             >
-              <option value="waveform">파형 (Waveform)</option>
-              <option value="frequency">주파수 (Frequency)</option>
-              <option value="circular">원형 (Circular)</option>
+              <option value="waveform" className="text-gray-900">파형 (Waveform)</option>
+              <option value="frequency" className="text-gray-900">주파수 (Frequency)</option>
+              <option value="circular" className="text-gray-900">원형 (Circular)</option>
             </select>
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-700 dark:text-gray-300">
               <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -144,11 +144,11 @@ export default function VisualizerControls({
                 id="color-scheme"
                 value={colorScheme}
                 onChange={(e) => setColorScheme(e.target.value as any)}
-                className="block w-full pl-4 pr-10 py-3 text-base bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 appearance-none dark:text-gray-200"
+                className="block w-full pl-4 pr-10 py-3 text-base text-gray-900 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 appearance-none dark:text-gray-200"
               >
-                <option value="default">기본 (Default)</option>
-                <option value="rainbow">무지개 (Rainbow)</option>
-                <option value="monochrome">흑백 (Monochrome)</option>
+                <option value="default" className="text-gray-900">기본 (Default)</option>
+                <option value="rainbow" className="text-gray-900">무지개 (Rainbow)</option>
+                <option value="monochrome" className="text-gray-900">흑백 (Monochrome)</option>
               </select>
               <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-700 dark:text-gray-300">
                 <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
