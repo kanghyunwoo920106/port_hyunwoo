@@ -4,6 +4,7 @@ const nextConfig = {
   basePath: process.env.NODE_ENV === 'production' ? '/port_hyunwoo' : '',
   images: {
     unoptimized: true,
+    path: process.env.NODE_ENV === 'production' ? '/port_hyunwoo' : '',
   },
   // 빌드 성능 최적화
   swcMinify: true,
@@ -23,6 +24,7 @@ const nextConfig = {
     // 개발 환경에서만 하이드레이션 오류를 자세히 로깅
     suppressHydrationWarning: process.env.NODE_ENV === 'production',
   },
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/port_hyunwoo' : '',
 };
 
 export default nextConfig;

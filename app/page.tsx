@@ -48,17 +48,17 @@ const projects: Project[] = [
 
 // 스킬 데이터
 const skills: Skill[] = [
-  { name: "React", icon: "/react.svg", type: "skill" },
-  { name: "Next.js", icon: "/nextjs.svg", type: "skill" },
-  { name: "JavaScript", icon: "/javascript.svg", type: "skill" },
-  { name: "TypeScript", icon: "/typescript.svg", type: "skill" },
-  { name: "HTML5", icon: "/html.svg", type: "skill" },
-  { name: "CSS3", icon: "/css.svg", type: "skill" },
-  { name: "Tailwind CSS", icon: "/tailwind.svg", type: "skill" },
-  { name: "Git", icon: "/git.svg", type: "tool" },
-  { name: "VS Code", icon: "/vscode.svg", type: "tool" },
-  { name: "Figma", icon: "/figma.svg", type: "tool" },
-  { name: "Cursor", icon: "/cursor.svg", type: "tool" },
+  { name: "React", icon: "./react.svg", type: "skill" },
+  { name: "Next.js", icon: "./nextjs.svg", type: "skill" },
+  { name: "JavaScript", icon: "./javascript.svg", type: "skill" },
+  { name: "TypeScript", icon: "./typescript.svg", type: "skill" },
+  { name: "HTML5", icon: "./html.svg", type: "skill" },
+  { name: "CSS3", icon: "./css.svg", type: "skill" },
+  { name: "Tailwind CSS", icon: "./tailwind.svg", type: "skill" },
+  { name: "Git", icon: "./git.svg", type: "tool" },
+  { name: "VS Code", icon: "./vscode.svg", type: "tool" },
+  { name: "Figma", icon: "./figma.svg", type: "tool" },
+  { name: "Cursor", icon: "./cursor.svg", type: "tool" },
 ];
 
 // 인터뷰 데이터
@@ -139,7 +139,7 @@ export default function Home() {
               
               <div className="intro-profile w-72 h-72 md:w-96 md:h-96 relative rounded-xl overflow-hidden shadow-lg mx-auto">
                 <Image 
-                  src="/photo.jpg" 
+                  src="./photo.jpg" 
                   alt="강현우 프로필" 
                   fill
                   priority
@@ -150,11 +150,11 @@ export default function Home() {
               <div className="mt-12 show-after-intro">
                 <div className="flex flex-wrap justify-center gap-5 mb-6">
                   <div className="flex items-center gap-2 text-gray-600">
-                    <Image src="/location.svg" alt="위치" width={16} height={16} />
+                    <Image src="./location.svg" alt="위치" width={16} height={16} />
                     <span>경기도 성남시</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-600">
-                    <Image src="/email.svg" alt="이메일" width={16} height={16} />
+                    <Image src="./email.svg" alt="이메일" width={16} height={16} />
                     <span>xkaizew12@gmail.com</span>
                   </div>
                 </div>
