@@ -1,7 +1,15 @@
 "use client";
+import { useState, useEffect } from "react";
 import { marked } from "marked";
 
 export default function Preview({ markdown }) {
+  const [isMounted, setIsMounted] = useState(false);
+
+  // 클라이언트 사이드에서만 마크다운 변환 실행
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
     <div className="flex flex-col h-full bg-gray-900 rounded-xl">
       <div className="flex items-center justify-between p-3 bg-gray-800 border-b border-gray-700 rounded-t-xl">
@@ -18,8 +26,13 @@ export default function Preview({ markdown }) {
       <div
         className="prose prose-invert max-w-full p-4 overflow-y-auto h-full text-white prose-a:text-blue-400 prose-headings:text-white prose-p:text-white prose-strong:text-white prose-code:text-white prose-pre:bg-gray-800"
         style={{ height: 'calc(100% - 52px)' }}
-        dangerouslySetInnerHTML={{ __html: marked(markdown) }}
-      />
+      >
+        {isMounted ? (
+          <div dangerouslySetInnerHTML={{ __html: marked(markdown) }} />
+        ) : (
+          <div>마크다운 미리보기 로딩 중...</div>
+        )}
+      </div>
     </div>
   );
 }

@@ -1,16 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 
 // react-json-view 동적 임포트
-const ReactJson = dynamic(() => import("react-json-view"), { ssr: false });
+const ReactJson = dynamic(() => import("react-json-view"), { 
+  ssr: false,
+  loading: () => <p className="text-gray-500">JSON 뷰어 로딩 중...</p>
+});
 
 export default function JsonTransfer() {
   const [input, setInput] = useState("");
   const [parsedJson, setParsedJson] = useState<any>(null);
   const [error, setError] = useState<string | null>(null);
+  const [isMounted, setIsMounted] = useState(false);
+
+  // 클라이언트 사이드에서만 실행되도록 마운트 상태 관리
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setInput(e.target.value);
@@ -54,10 +63,15 @@ export default function JsonTransfer() {
         <div>
           <h2 className="text-xl font-semibold mb-2">결과</h2>
           <div className="w-full h-[500px] p-4 border rounded-lg overflow-auto bg-gray-50 dark:bg-gray-800">
-            {parsedJson ? (
-              <ReactJson src={parsedJson} theme="monokai" displayDataTypes={false} />
+            {/* 클라이언트 사이드에서만 ReactJson을 렌더링 */}
+            {isMounted ? (
+              parsedJson ? (
+                <ReactJson src={parsedJson} theme="monokai" displayDataTypes={false} />
+              ) : (
+                <p className="text-gray-500">유효한 JSON을 입력하면 여기에 결과가 표시됩니다.</p>
+              )
             ) : (
-              <p className="text-gray-500">유효한 JSON을 입력하면 여기에 결과가 표시됩니다.</p>
+              <p className="text-gray-500">JSON 뷰어 준비 중...</p>
             )}
           </div>
         </div>

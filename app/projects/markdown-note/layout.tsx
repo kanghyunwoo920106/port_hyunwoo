@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "./reactmodal.css";
@@ -23,14 +23,21 @@ export default function MarkdownNoteLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // 컴포넌트 마운트 시 다크 모드 적용
+  const [isMounted, setIsMounted] = useState(false);
+
+  // 컴포넌트 마운트 후에만 DOM 조작 실행
   useEffect(() => {
+    setIsMounted(true);
+
     // 현재 테마 상태 저장
     const prevTheme = localStorage.getItem('theme');
     
     // 마크다운 페이지에서는 항상 다크 모드 사용
     document.documentElement.classList.add('dark');
     localStorage.setItem('theme', 'dark');
+    
+    // 문서 제목 변경
+    document.title = "마크다운 메모장";
     
     // 컴포넌트 언마운트 시 이전 테마로 복원
     return () => {
@@ -43,12 +50,6 @@ export default function MarkdownNoteLayout({
         localStorage.setItem('theme', prevTheme);
       }
     };
-  }, []);
-
-  // 문서 제목 설정을 위한 useEffect 추가
-  useEffect(() => {
-    // 문서 제목 변경
-    document.title = "마크다운 메모장";
   }, []);
 
   return (
