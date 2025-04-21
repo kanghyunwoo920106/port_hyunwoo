@@ -17,7 +17,7 @@ const nextConfig = {
   },
   // TypeScript 검사 건너뛰기
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
   },
   // hydration error 디버깅 옵션: 개발 환경에서만 활성화
   experimental: {
