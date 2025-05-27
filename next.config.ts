@@ -10,7 +10,7 @@ const nextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   // SVG 파일을 정적 에셋으로 처리
-  webpack(config) {
+  webpack(config: any) {
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
