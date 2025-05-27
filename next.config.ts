@@ -5,6 +5,17 @@ const nextConfig = {
   images: {
     unoptimized: true,
     path: process.env.NODE_ENV === 'production' ? '/port_hyunwoo' : '',
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
+  // SVG 파일을 정적 에셋으로 처리
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
+    return config;
   },
   // 빌드 성능 최적화
   swcMinify: true,

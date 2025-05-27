@@ -5,6 +5,35 @@ import Image from "next/image";
 import Link from "next/link";
 import ProjectCard from "./components/ProjectCard";
 
+// SVG 파일 import
+import ReactIcon from '../public/react.svg';
+import NextjsIcon from '../public/nextjs.svg';
+import JavaScriptIcon from '../public/javascript.svg';
+import TypeScriptIcon from '../public/typescript.svg';
+import HtmlIcon from '../public/html.svg';
+import CssIcon from '../public/css.svg';
+import TailwindIcon from '../public/tailwind.svg';
+import GitIcon from '../public/git.svg';
+import VscodeIcon from '../public/vscode.svg';
+import FigmaIcon from '../public/figma.svg';
+import CursorIcon from '../public/cursor.svg';
+import LocationIcon from '../public/location.svg';
+import EmailIcon from '../public/email.svg';
+import NodejsIcon from '../public/nodejs.svg';
+import MongodbIcon from '../public/mongodb.svg';
+import AwsIcon from '../public/aws.svg';
+import ReduxIcon from '../public/redux.svg';
+import Web3Icon from '../public/web3.svg';
+import EthereumIcon from '../public/ethereum.svg';
+import CsharpIcon from '../public/csharp.svg';
+import WpfIcon from '../public/wpf.svg';
+import DotnetIcon from '../public/dotnet.svg';
+import VisualstudioIcon from '../public/visualstudio.svg';
+import DirectxIcon from '../public/directx.svg';
+import JqueryIcon from '../public/jquery.svg';
+import PhotoshopIcon from '../public/photoshop.svg';
+import IllustratorIcon from '../public/illustrator.svg';
+
 // 데이터 타입 정의
 interface Project {
   id: string;
@@ -48,17 +77,17 @@ const projects: Project[] = [
 
 // 스킬 데이터
 const skills: Skill[] = [
-  { name: "React", icon: "./react.svg", type: "skill" },
-  { name: "Next.js", icon: "./nextjs.svg", type: "skill" },
-  { name: "JavaScript", icon: "./javascript.svg", type: "skill" },
-  { name: "TypeScript", icon: "./typescript.svg", type: "skill" },
-  { name: "HTML5", icon: "./html.svg", type: "skill" },
-  { name: "CSS3", icon: "./css.svg", type: "skill" },
-  { name: "Tailwind CSS", icon: "./tailwind.svg", type: "skill" },
-  { name: "Git", icon: "./git.svg", type: "tool" },
-  { name: "VS Code", icon: "./vscode.svg", type: "tool" },
-  { name: "Figma", icon: "./figma.svg", type: "tool" },
-  { name: "Cursor", icon: "./cursor.svg", type: "tool" },
+  { name: "React", icon: ReactIcon, type: "skill" },
+  { name: "Next.js", icon: NextjsIcon, type: "skill" },
+  { name: "JavaScript", icon: JavaScriptIcon, type: "skill" },
+  { name: "TypeScript", icon: TypeScriptIcon, type: "skill" },
+  { name: "HTML5", icon: HtmlIcon, type: "skill" },
+  { name: "CSS3", icon: CssIcon, type: "skill" },
+  { name: "Tailwind CSS", icon: TailwindIcon, type: "skill" },
+  { name: "Git", icon: GitIcon, type: "tool" },
+  { name: "VS Code", icon: VscodeIcon, type: "tool" },
+  { name: "Figma", icon: FigmaIcon, type: "tool" },
+  { name: "Cursor", icon: CursorIcon, type: "tool" },
 ];
 
 // 인터뷰 데이터
@@ -313,11 +342,11 @@ export default function Home() {
               <div className="mt-12 show-after-intro">
                 <div className="flex flex-wrap justify-center gap-5 mb-6">
                   <div className="flex items-center gap-2 text-gray-600">
-                    <Image src="./location.svg" alt="위치" width={16} height={16} />
+                    <Image src={LocationIcon} alt="위치" width={16} height={16} />
                     <span>경기도 성남시</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-600">
-                    <Image src="./email.svg" alt="이메일" width={16} height={16} />
+                    <Image src={EmailIcon} alt="이메일" width={16} height={16} />
                     <span>xkaizew12@gmail.com</span>
                   </div>
                 </div>
@@ -452,25 +481,25 @@ export default function Home() {
               
               <div className="flex flex-wrap gap-2 mb-4">
                 <div className="tech-icon">
-                  <Image src="/react.svg" alt="React" width={24} height={24} />
+                  <Image src={ReactIcon} alt="React" width={24} height={24} />
                 </div>
                 <div className="tech-icon">
-                  <Image src="/nextjs.svg" alt="Next.js" width={24} height={24} />
+                  <Image src={NextjsIcon} alt="Next.js" width={24} height={24} />
                 </div>
                 <div className="tech-icon">
-                  <Image src="/typescript.svg" alt="TypeScript" width={24} height={24} />
+                  <Image src={TypeScriptIcon} alt="TypeScript" width={24} height={24} />
                 </div>
                 <div className="tech-icon">
-                  <Image src="/javascript.svg" alt="JavaScript" width={24} height={24} />
+                  <Image src={JavaScriptIcon} alt="JavaScript" width={24} height={24} />
                 </div>
                 <div className="tech-icon">
-                  <Image src="/nodejs.svg" alt="Node.js" width={24} height={24} />
+                  <Image src={NodejsIcon} alt="Node.js" width={24} height={24} />
                 </div>
                 <div className="tech-icon">
-                  <Image src="/mongodb.svg" alt="MongoDB" width={24} height={24} />
+                  <Image src={MongodbIcon} alt="MongoDB" width={24} height={24} />
                 </div>
                 <div className="tech-icon">
-                  <Image src="/aws.svg" alt="AWS" width={24} height={24} />
+                  <Image src={AwsIcon} alt="AWS" width={24} height={24} />
                 </div>
               </div>
               
@@ -504,13 +533,13 @@ export default function Home() {
                 
                 <div className="project-item">
                   <h4 className="text-lg font-semibold">제약 정보 관리 플랫폼 개발</h4>
-                  <p className="text-sm text-gray-400 mb-2">React, Next.js, Redux, JavaScript, Bryntum Grid API, PHP, Laravel, Docker</p>
+                  <p className="text-sm text-gray-400 mb-2">React, Next.js, Redux, JavaScript, Ag-grid API, PHP, Laravel, Docker</p>
                   
                   <p className="mb-3">주요 개발 내용:</p>
                   <ul className="space-y-2 list-disc pl-5">
                     <li>Next.js 13 기반 서버 컴포넌트와 클라이언트 컴포넌트 분리로 초기 로딩 성능 50% 개선</li>
                     <li>Redux-Toolkit과 RTK Query를 활용한 전역 상태 관리 및 API 요청 최적화</li>
-                    <li>Bryntum Grid의 복잡한 데이터 조작 및 필터링 기능 커스터마이징</li>
+                    <li>Ag-grid의 복잡한 데이터 조작 및 필터링 기능 커스터마이징</li>
                     <li>CSV 및 Excel 파일 일괄 업로드 및 데이터 처리 기능 구현</li>
                     <li>PHP Laravel 백엔드와의 API 통합 및 데이터 정합성 검증 로직 개발</li>
                     <li>Docker 컨테이너를 활용한 개발 및 배포 환경 구성</li>
@@ -520,7 +549,7 @@ export default function Home() {
                   <ul className="space-y-2 list-disc pl-5">
                     <li>200,000개 이상의 약품 데이터를 효율적으로 처리하기 위한 가상화 스크롤 구현</li>
                     <li>고용량 데이터 필터링 시 UI 응답성 향상을 위한 웹 워커 도입</li>
-                    <li>Next.js와 Bryntum Grid 라이센스 호환성 문제 해결 및 동적 로딩 최적화</li>
+                    <li>Next.js와 Ag-grid 라이센스 호환성 문제 해결 및 동적 로딩 최적화</li>
                     <li>복잡한 폼 상태 관리를 위한 React-Hook-Form과 Redux 통합 패턴 개발</li>
                     <li>브라우저 호환성 문제 해결 및 IE11 지원을 위한 폴리필 최적화</li>
                     <li>API 요청 병목 현상 해결을 위한 배치 처리 및 쓰로틀링 구현</li>
@@ -529,7 +558,7 @@ export default function Home() {
                 
                 <div className="project-item">
                   <h4 className="text-lg font-semibold">화훼 도매 및 배송 플랫폼 개발</h4>
-                  <p className="text-sm text-gray-400 mb-2">React, Next.js, React Query, JavaScript, Bryntum Grid API, PHP, CodeIgniter, Docker</p>
+                  <p className="text-sm text-gray-400 mb-2">React, Next.js, React Query, JavaScript, Ag-grid API, PHP, CodeIgniter, Docker</p>
                   
                   <p className="mb-3">주요 개발 내용:</p>
                   <ul className="space-y-2 list-disc pl-5">
@@ -568,25 +597,25 @@ export default function Home() {
               
               <div className="flex flex-wrap gap-2 mb-4">
                 <div className="tech-icon">
-                  <Image src="/react.svg" alt="React" width={24} height={24} />
+                  <Image src={ReactIcon} alt="React" width={24} height={24} />
                 </div>
                 <div className="tech-icon">
-                  <Image src="/nextjs.svg" alt="Next.js" width={24} height={24} />
+                  <Image src={NextjsIcon} alt="Next.js" width={24} height={24} />
                 </div>
                 <div className="tech-icon">
-                  <Image src="/typescript.svg" alt="TypeScript" width={24} height={24} />
+                  <Image src={TypeScriptIcon} alt="TypeScript" width={24} height={24} />
                 </div>
                 <div className="tech-icon">
-                  <Image src="/javascript.svg" alt="JavaScript" width={24} height={24} />
+                  <Image src={JavaScriptIcon} alt="JavaScript" width={24} height={24} />
                 </div>
                 <div className="tech-icon">
-                  <Image src="/redux.svg" alt="Redux" width={24} height={24} />
+                  <Image src={ReduxIcon} alt="Redux" width={24} height={24} />
                 </div>
                 <div className="tech-icon">
-                  <Image src="/web3.svg" alt="Web3.js" width={24} height={24} />
+                  <Image src={Web3Icon} alt="Web3.js" width={24} height={24} />
                 </div>
                 <div className="tech-icon">
-                  <Image src="/ethereum.svg" alt="Ethereum" width={24} height={24} />
+                  <Image src={EthereumIcon} alt="Ethereum" width={24} height={24} />
                 </div>
               </div>
               
@@ -634,19 +663,19 @@ export default function Home() {
               
               <div className="flex flex-wrap gap-2 mb-4">
                 <div className="tech-icon">
-                  <Image src="/csharp.svg" alt="C#" width={24} height={24} />
+                  <Image src={CsharpIcon} alt="C#" width={24} height={24} />
                 </div>
                 <div className="tech-icon">
-                  <Image src="/wpf.svg" alt="WPF" width={24} height={24} />
+                  <Image src={WpfIcon} alt="WPF" width={24} height={24} />
                 </div>
                 <div className="tech-icon">
-                  <Image src="/dotnet.svg" alt=".NET" width={24} height={24} />
+                  <Image src={DotnetIcon} alt=".NET" width={24} height={24} />
                 </div>
                 <div className="tech-icon">
-                  <Image src="/visualstudio.svg" alt="Visual Studio" width={24} height={24} />
+                  <Image src={VisualstudioIcon} alt="Visual Studio" width={24} height={24} />
                 </div>
                 <div className="tech-icon">
-                  <Image src="/directx.svg" alt="DirectX" width={24} height={24} />
+                  <Image src={DirectxIcon} alt="DirectX" width={24} height={24} />
                 </div>
               </div>
               
@@ -694,22 +723,22 @@ export default function Home() {
               
               <div className="flex flex-wrap gap-2 mb-4">
                 <div className="tech-icon">
-                  <Image src="/html.svg" alt="HTML5" width={24} height={24} />
+                  <Image src={HtmlIcon} alt="HTML5" width={24} height={24} />
                 </div>
                 <div className="tech-icon">
-                  <Image src="/css.svg" alt="CSS3" width={24} height={24} />
+                  <Image src={CssIcon} alt="CSS3" width={24} height={24} />
                 </div>
                 <div className="tech-icon">
-                  <Image src="/javascript.svg" alt="JavaScript" width={24} height={24} />
+                  <Image src={JavaScriptIcon} alt="JavaScript" width={24} height={24} />
                 </div>
                 <div className="tech-icon">
-                  <Image src="/jquery.svg" alt="jQuery" width={24} height={24} />
+                  <Image src={JqueryIcon} alt="jQuery" width={24} height={24} />
                 </div>
                 <div className="tech-icon">
-                  <Image src="/photoshop.svg" alt="Photoshop" width={24} height={24} />
+                  <Image src={PhotoshopIcon} alt="Photoshop" width={24} height={24} />
                 </div>
                 <div className="tech-icon">
-                  <Image src="/illustrator.svg" alt="Illustrator" width={24} height={24} />
+                  <Image src={IllustratorIcon} alt="Illustrator" width={24} height={24} />
                 </div>
               </div>
               
