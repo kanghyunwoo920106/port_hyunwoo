@@ -507,6 +507,31 @@ export default function Home() {
                 <p>React 및 Next.js를 활용한 기업용 솔루션 개발을 담당하고 있습니다. 서버 사이드 렌더링과 클라이언트 사이드 렌더링의 적절한 조합을 통해 최적의 성능과 사용자 경험을 제공하는 애플리케이션을 구축하고 있습니다.</p>
                 
                 <div className="project-item">
+                  <h4 className="text-lg font-semibold">제약 정보 관리 플랫폼 개발</h4>
+                  <p className="text-sm text-gray-400 mb-2">React, Next.js, Redux, JavaScript, Ag-grid API, PHP, Laravel, Docker</p>
+                  
+                  <p className="mb-3">주요 개발 내용:</p>
+                  <ul className="space-y-2 list-disc pl-5">
+                    <li>Next.js 13 기반 서버 컴포넌트와 클라이언트 컴포넌트 분리로 초기 로딩 성능 50% 개선</li>
+                    <li>Redux-Toolkit과 RTK Query를 활용한 전역 상태 관리 및 API 요청 최적화</li>
+                    <li>Ag-grid의 복잡한 데이터 조작 및 필터링 기능 커스터마이징</li>
+                    <li>CSV 및 Excel 파일 일괄 업로드 및 데이터 처리 기능 구현</li>
+                    <li>PHP Laravel 백엔드와의 API 통합 및 데이터 정합성 검증 로직 개발</li>
+                    <li>Docker 컨테이너를 활용한 개발 및 배포 환경 구성</li>
+                  </ul>
+                  
+                  <p className="mt-4 mb-3">트러블슈팅 경험:</p>
+                  <ul className="space-y-2 list-disc pl-5">
+                    <li>200,000개 이상의 약품 데이터를 효율적으로 처리하기 위한 가상화 스크롤 구현</li>
+                    <li>고용량 데이터 필터링 시 UI 응답성 향상을 위한 웹 워커 도입</li>
+                    <li>Next.js와 Ag-grid 라이센스 호환성 문제 해결 및 동적 로딩 최적화</li>
+                    <li>복잡한 폼 상태 관리를 위한 React-Hook-Form과 Redux 통합 패턴 개발</li>
+                    <li>브라우저 호환성 문제 해결 및 IE11 지원을 위한 폴리필 최적화</li>
+                    <li>API 요청 병목 현상 해결을 위한 배치 처리 및 쓰로틀링 구현</li>
+                  </ul>
+                </div>
+
+                <div className="project-item">
                   <h4 className="text-lg font-semibold">문서 관리 및 공유 플랫폼 개발</h4>
                   <p className="text-sm text-gray-400 mb-2">React, Next.js, TypeScript, SpreadJS, Node.js, MongoDB, AWS</p>
                   
@@ -531,30 +556,7 @@ export default function Home() {
                   </ul>
                 </div>
                 
-                <div className="project-item">
-                  <h4 className="text-lg font-semibold">제약 정보 관리 플랫폼 개발</h4>
-                  <p className="text-sm text-gray-400 mb-2">React, Next.js, Redux, JavaScript, Ag-grid API, PHP, Laravel, Docker</p>
-                  
-                  <p className="mb-3">주요 개발 내용:</p>
-                  <ul className="space-y-2 list-disc pl-5">
-                    <li>Next.js 13 기반 서버 컴포넌트와 클라이언트 컴포넌트 분리로 초기 로딩 성능 50% 개선</li>
-                    <li>Redux-Toolkit과 RTK Query를 활용한 전역 상태 관리 및 API 요청 최적화</li>
-                    <li>Ag-grid의 복잡한 데이터 조작 및 필터링 기능 커스터마이징</li>
-                    <li>CSV 및 Excel 파일 일괄 업로드 및 데이터 처리 기능 구현</li>
-                    <li>PHP Laravel 백엔드와의 API 통합 및 데이터 정합성 검증 로직 개발</li>
-                    <li>Docker 컨테이너를 활용한 개발 및 배포 환경 구성</li>
-                  </ul>
-                  
-                  <p className="mt-4 mb-3">트러블슈팅 경험:</p>
-                  <ul className="space-y-2 list-disc pl-5">
-                    <li>200,000개 이상의 약품 데이터를 효율적으로 처리하기 위한 가상화 스크롤 구현</li>
-                    <li>고용량 데이터 필터링 시 UI 응답성 향상을 위한 웹 워커 도입</li>
-                    <li>Next.js와 Ag-grid 라이센스 호환성 문제 해결 및 동적 로딩 최적화</li>
-                    <li>복잡한 폼 상태 관리를 위한 React-Hook-Form과 Redux 통합 패턴 개발</li>
-                    <li>브라우저 호환성 문제 해결 및 IE11 지원을 위한 폴리필 최적화</li>
-                    <li>API 요청 병목 현상 해결을 위한 배치 처리 및 쓰로틀링 구현</li>
-                  </ul>
-                </div>
+                
                 
                 <div className="project-item">
                   <h4 className="text-lg font-semibold">화훼 도매 및 배송 플랫폼 개발</h4>
@@ -650,7 +652,7 @@ export default function Home() {
             </div>
             
             {/* 누리콘 */}
-            <div className="career-card fade-in-up delay-300">
+            {/* <div className="career-card fade-in-up delay-300">
               <div className="flex flex-col md:flex-row justify-between mb-4">
                 <div>
                   <h3 className="text-xl font-bold">누리콘</h3>
@@ -707,10 +709,10 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </div> */}
             
             {/* 위즈도메인 */}
-            <div className="career-card fade-in-up delay-400">
+            {/* <div className="career-card fade-in-up delay-400">
               <div className="flex flex-col md:flex-row justify-between mb-4">
                 <div>
                   <h3 className="text-xl font-bold">위즈도메인</h3>
@@ -770,7 +772,7 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
