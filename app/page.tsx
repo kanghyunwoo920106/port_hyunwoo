@@ -512,7 +512,7 @@ export default function Home() {
                   
                   <p className="mb-3">주요 개발 내용:</p>
                   <ul className="space-y-2 list-disc pl-5">
-                    <li>Next.js 13 기반 서버 컴포넌트와 클라이언트 컴포넌트 분리로 초기 로딩 성능 50% 개선</li>
+                    <li>Next.js 15 기반 서버 컴포넌트와 클라이언트 컴포넌트 분리로 초기 로딩 성능 50% 개선</li>
                     <li>Redux-Toolkit과 RTK Query를 활용한 전역 상태 관리 및 API 요청 최적화</li>
                     <li>Ag-grid의 복잡한 데이터 조작 및 필터링 기능 커스터마이징</li>
                     <li>CSV 및 Excel 파일 일괄 업로드 및 데이터 처리 기능 구현</li>
@@ -537,7 +537,7 @@ export default function Home() {
                   
                   <p className="mb-3">주요 개발 내용:</p>
                   <ul className="space-y-2 list-disc pl-5">
-                    <li>Next.js 13 App Router 기반의 서버 사이드 렌더링 아키텍처 설계 및 구현</li>
+                    <li>Next.js 15 App Router 기반의 서버 사이드 렌더링 아키텍처 설계 및 구현</li>
                     <li>TypeScript와 Zod를 활용한 타입 안전성 확보 및 런타임 데이터 유효성 검증</li>
                     <li>React의 Suspense와 ErrorBoundary를 활용한 안정적인 데이터 로딩 처리</li>
                     <li>SpreadJS를 Next.js 환경에 최적화하여 통합하고 고성능 엑셀 기능 구현</li>
