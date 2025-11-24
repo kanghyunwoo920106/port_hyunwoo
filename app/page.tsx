@@ -513,7 +513,6 @@ export default function Home() {
                   <p className="mb-3">주요 개발 내용:</p>
                   <ul className="space-y-2 list-disc pl-5">
                     <li>Next.js 15 기반 서버 컴포넌트와 클라이언트 컴포넌트 분리로 초기 로딩 성능 50% 개선</li>
-                    <li>Redux-Toolkit과 RTK Query를 활용한 전역 상태 관리 및 API 요청 최적화</li>
                     <li>Ag-grid의 복잡한 데이터 조작 및 필터링 기능 커스터마이징</li>
                     <li>CSV 및 Excel 파일 일괄 업로드 및 데이터 처리 기능 구현</li>
                     <li>PHP Laravel 백엔드와의 API 통합 및 데이터 정합성 검증 로직 개발</li>
@@ -541,8 +540,6 @@ export default function Home() {
                     <li>TypeScript와 Zod를 활용한 타입 안전성 확보 및 런타임 데이터 유효성 검증</li>
                     <li>React의 Suspense와 ErrorBoundary를 활용한 안정적인 데이터 로딩 처리</li>
                     <li>SpreadJS를 Next.js 환경에 최적화하여 통합하고 고성능 엑셀 기능 구현</li>
-                    <li>MongoDB 애그리게이션 파이프라인을 활용한 실시간 문서 통계 집계 구현</li>
-                    <li>AWS S3와 CloudFront를 활용한 문서 보관 및 배포 시스템 구축</li>
                   </ul>
                   
                   <p className="mt-4 mb-3">트러블슈팅 경험:</p>
@@ -550,7 +547,6 @@ export default function Home() {
                     <li>Next.js 환경에서 SpreadJS 라이센스 검증 문제 해결을 위한 커스텀 로더 구현</li>
                     <li>대용량 엑셀 파일 처리 시 메모리 사용량 최적화를 위한 스트리밍 방식 도입</li>
                     <li>SSR과 CSR을 혼합 사용 시 발생하는 hydration 불일치 문제 해결</li>
-                    <li>동시 편집 시 충돌 방지를 위한 낙관적 동시성 제어(OCC) 구현</li>
                     <li>문서 변경 사항 실시간 동기화를 위한 웹소켓 연결 안정성 개선</li>
                     <li>사용자 권한에 따른 문서 접근 제어 시스템 설계 및 보안 취약점 개선</li>
                   </ul>
